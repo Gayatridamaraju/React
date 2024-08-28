@@ -3,12 +3,14 @@ import {createRoot} from "react-dom/client";
 import Header from "./header";
 import About from "./About";
 import Contact from "./Contact";
+import Body from "./body";
 
-import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const rootReact=createRoot(document.getElementById("root"))
 const Applayout=()=>(
     <div className="app-layout">
         <Header />
+        <Body />
 
     </div>
 
@@ -21,7 +23,7 @@ const Applayout=()=>(
           children: [
             {
               path:"/home",
-              element:<About/>,
+              element:<Body/>,
             },
             {
               path:"/about",
